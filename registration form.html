@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<style>
+form {
+    border: 1px solid green ;
+}
+
+input[type=text],input[type=number],input[type=date] {
+    width: 100%;
+    padding: 10px 18px;
+    margin: 8px ;
+    display: inline-block;
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+
+button {
+    background-color:red;
+	color:white;
+    padding: 14px 20px;
+    margin: 8px ;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.4;}
+	.cancelbtn{width:100%;}
+
+.container {
+    padding: 16px;}
+	a:link, a:visited {
+    background-color:red;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+a:hover, a:active {
+    background-color: red;}
+	
+
+</style>
+<body>
+
+<h2>REGISTRATION FOR ADDMISSION</h2>
+
+<form action="/action_page.php" onsubmit="return myfunc()">
+  
+  <div class="container">
+    <label><b>Student's name</b></label>
+    <input type="text" placeholder="Enter name" name="uname" id="name1" required>
+
+    <label><b>Father's name</b></label>
+    <input type="text" placeholder="Enter father's name" name="uname" id="name2" required>
+	<label><b>Mother's name</b></label>
+	<input type="text" placeholder="Enter mother's name" name="uname" id="name3" required>
+	<label><b>Present address</b></label>
+	<input type="text" placeholder="Enter pre address" name="uname" id="name4" required>
+	<label><b>Parmanent address</b></label>
+	<input type="text" placeholder="Enter par address" name="uname" id="name5" required>
+    <label><b>Date of birth</b></label>
+    <input type="date" placeholder="Enter the date" name="bday" id="date" required>
+	<label><b>Age</b></label>
+	<input type="number" placeholder="Enter the age" name="quantity" min="6" max="12" id="age" required>
+	<button type="submit">SUBMIT</button>
+</div>
+</form>
+<script>
+function myfunc()
+{var Name1=document.getElementById("name1").value;
+var Name2=document.getElementById("name2").value;
+var Name3=document.getElementById("name3").value;
+var Name4=document.getElementById("name4").value;
+var Name5=document.getElementById("name5").value;
+var date=document.getElementById("date").value;
+var age=document.getElementById("age").value;
+if(Name1=="" || Name2=="" || Name3=="" || Name4=="" || Name5=="" || date=="" || age=="")
+{alert('empty entry is not acceptable')
+}
+else{
+alert('you have successfully registered')
+}
+return true;}
+</script> 
+</body>
+</html>

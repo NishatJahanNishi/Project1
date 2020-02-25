@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.dropbtn {
+    background-color:BlueViolet;
+    border:none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration:none;
+    font-size: 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+.dropbtn1{border:2px solid cyan;}
+.dropbtn2{border:2px solid cyan;}
+.dropbtn3{border:2px solid cyan;}
+.dropbtn4{border:2px solid cyan;}
+.dropbtn5{border:2px solid cyan;}
+.dropbtn6{border:2px solid cyan;}
+.dropdown{
+position:relative;
+display:inline-block;}
+.dropdown-content{
+background-color:#9fc6a5;
+right:0;
+border:#13145b;
+position:absolute;
+min-width:200px;
+display:none;
+padding:15px 32px;}
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	font-size:30px;
+}
+.dropdown-content a:hover{background-color:white;}
+.dropdown:hover .dropdown-content{
+display:block;}
+.dropdown:hover .dropbtn{background-color:green;}
+
+
+nav1 {
+    float:left;
+    max-width: 170px;
+    margin:10px;
+    padding: 6px;
+   
+}
+nav2 {
+float:right;
+margin:15px;
+padding:6px;}
+
+nav1 ul1 {
+    list-style-type:square;
+    padding: 1px; 
+    
+}
+nav1 ul2{
+list-style-type:square;
+padding:2px;}
+   
+nav1 ul1 a {
+    text-decoration:none;
+    color:black;
+}
+nav1 ul2 a{
+color:black;
+text-decoration:none;}
+nav2 ul1{list-style-type:square;
+padding:2px;
+}
+nav2 ul1 a{text-decoration:none;
+color:black;}
+nav2 ul2{list-style-type:square;
+padding:2px;}
+nav2 ul2 a{text-decoration:none;
+color:black;}
+article{float:center;}
+	
+.mySlides {display:inline;}
+
+
+.slideshow-container {
+  max-width: 10px;
+  position:relative;
+  margin: auto;
+  float:center;
+}
+
+.text {
+  color:white;
+  font-size: 20px;
+  padding: 10px 12px;
+  position:absolute;
+  bottom: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+</style>
+</head>
+<body bgcolor="white">
+<h1><center><img src="logo.jpg" style="width:110px;height:110px;"></center></h1>
+
+<h2 style="color:blue"><center> GOVERNMENT HIGH SCHOOL </center>
+</h2>
+
+<div class="dropdown">
+<button class="dropbtn dropbtn1 "> HOME </button>
+<div class="dropdown-content" style="left:0">
+<a href="history.html"> History </a>
+<a href="school map.html">School map</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn dropbtn2"> ADMINISTRATION </button>
+<div class="dropdown-content" style="left:1px">
+<a href="admin.html"> Administrative office</a>
+<a href="manage.html">Management</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn dropbtn3"> ADDMISSION </button>
+<div class="dropdown-content" style="left:2px">
+<a href="addmission date.html">Addmission test date</a>
+<a href="result.html">Result</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn dropbtn4"> ACCOUNTING SYSTEM </button>
+<div class="dropdown-content" style="left:3px">
+<a href="ses fee.html"> Session fees</a>
+<a href="exam fee.html">Exam fees</a>
+<a href="mon fee.html"> Monthly fees</a>
+</div>
+</div>
+<div class="dropdown"> 
+<button class="dropbtn dropbtn5"> FACILITIES </button>
+<div class="dropdown-content" style="left:4px">
+<a href="res.html">Student residence</a>
+<a href="teach.html">Teaching system</a>
+<a href="fac.html">Other facilities</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn dropbtn6"> ATTENDENCE </button>
+<div class="dropdown-content" style="left:5px">
+<a href="s attend.html">Student</a>
+<a href="t attend.html">Teacher</a>
+</div>
+</div>
+<br>
+<center><div class="slideshow-container"></center>
+<div class="mySlides">
+  
+  <center><img src="ideal 2.jpg" style="width:1000px;height:400px;"></center>
+  <div class="text"><center>SCHOOL'S FRONT VIEW</center></div>
+</div>
+
+<div class="mySlides">
+  
+  <center><img src="ideal 5.jpg" style="width:1000px;height:400px;"></center>
+  <div class="text"><center>ASSEMBLY TIME</center></div>
+</div>
+
+<div class="mySlides">
+ 
+  <center><img src="ideal 4.jpg" style="width:1000px;height:400px;"></center>
+  <div class="text"><center>SCHOOL'S STUDENTS</center></div>
+</div>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<p id="demo"></p>
+<script>
+var slideIndex = 0;
+
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+	}
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1;}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace( "active", "");
+    }
+    slides[slideIndex-1].style.display = "inline";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides,2000); 
+	
+}
+</script>
+
+<br>
+
+<nav1>
+  <ul1>
+  <h2>EVENT</h2>
+    <li><a href="seminar.html">Seminer</a></li>
+    <li><a href="sw.html">Social work</a></li>
+    <li><a href="welfare.html">Welfare</a></li>
+  </ul1>
+  <ul2>
+  <h2>NEWS FEED</h2>
+  <li><a href="school bulatien.html">School bulletin </a></li>
+  <li><a href="recent.html">Recent</a></li>
+  
+  </ul2>
+</nav1>
+<nav2>
+<ul1>
+  <h2>NOTICE</h2>
+    <li><a href="HM notice.html"> Headmaster Office</a></li>
+    <li><a href="t notice.html">For Teacher</a></li>
+    <li><a href="s notice.html">For Student</a></li>
+  </ul1>
+  <ul2>
+  <h2>ACTIVITIES</h2>
+  <li><a href="cultural.html">Cultural</a></li>
+  <li><a href="national.html">National</a></li>
+  </ul2>
+  </nav2>
+  <article>
+<h1 style="color:rebeccapurple"><center>TEACHING SYSTEM</center></h1>
+<p style="color:darkgreen;font-size:160%;font-family:verdana;">The teaching system of this school is good for students.Teachers are very concern about the students.
+They take good care of students, they help the student to overcome their studies problem.80% studies are being completed in the school by the experienced teacher.
+teachers take extra classes for weak students.</p>
+</article>
+</body>
+</html>
